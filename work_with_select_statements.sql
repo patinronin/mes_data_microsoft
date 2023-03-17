@@ -1,5 +1,6 @@
 /*
-usando la base de datos 
+usando la base de datos
+adventureworks 
 */
 
 /*

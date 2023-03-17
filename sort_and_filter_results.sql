@@ -29,9 +29,20 @@ paginacion
 puedes usar OFFSET N ROWS para seleccionar un offset 
 puedes usar el FETCH NEXT N ROWS ONLY para regresar los siguientes N renglones
 */
-
 SELECT ProductID, ProductName, ListPrice
 FROM Production.Product
 ORDER BY ListPrice DESC 
 OFFSET 0 ROWS --Skip zero rows
 FETCH NEXT 10 ROWS ONLY; --Get the next 10
+
+/*
+para mostrar todas las combinaciones unicas 
+se uede usar ALL  o DISTINCT unicamente en T-SQL
+*/
+SELECT ALL City, CountryRegion
+FROM Production.Supplier
+ORDER BY CountryRegion, City;
+
+SELECT DISTINCT City, CountryRegion
+FROM Production.Supplier
+ORDER BY CountryRegion, City;
